@@ -5,14 +5,23 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #222;
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/weather.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(40%);
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
 }
-
 .card {
-  width: 90%;
-  max-width: 470px;
-  background: linear-gradient(135deg, #00feba, #5b548a);
+  width: 94%;
+  max-width: 480px;
+  background: linear-gradient(135deg, #0962af, #7d14df, #010c20);
   color: #fff;
   margin: 100px auto 0;
   border-radius: 20px;
